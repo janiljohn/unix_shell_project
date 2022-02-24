@@ -1,3 +1,5 @@
+// Joel Anil John and Danyal Nemati
+
 #include <fcntl.h>
 #include <stdio.h>
 #include <string.h>
@@ -115,7 +117,7 @@ int main(int argc, const char * argv[]) {
         int file = open(input, O_RDONLY);
         dup2(file, STDIN_FILENO);
         close(file);
-      } else if(strncmp(input, "<", 1) == 0){
+      } else if(strncmp(input, ">", 1) == 0){
         int file = open(input, O_WRONLY | O_TRUNC | O_CREAT, S_IRUSR | S_IRGRP | S_IWGRP | S_IWUSR);
         dup2(file, STDOUT_FILENO);
         close(file);
