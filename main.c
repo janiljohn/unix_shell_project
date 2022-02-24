@@ -6,6 +6,7 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <unistd.h>
+#include<sys/wait.h>
 
 #define MAX_CMD_LINE_ARGS  128
 
