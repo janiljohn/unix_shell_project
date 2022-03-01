@@ -129,3 +129,37 @@ int main(int argc, const char * argv[]) {
   printf("\t\t...exiting\n");
   return 0;
 }
+
+/*
+
+osh > ls
+after parse, what is input: ls
+a.out  main.c
+osh > mkdir demo
+after parse, what is input: mkdir
+osh > ls
+after parse, what is input: ls
+a.out  demo  main.c
+osh > rmdir demo
+after parse, what is input: rmdir
+osh > ls
+after parse, what is input: ls
+a.out  main.c
+osh > touch demo.c
+after parse, what is input: touch
+osh > !!
+touch demo.c
+osh > ls
+after parse, what is input: ls
+a.out  demo.c  main.c
+osh > rm demo.c
+after parse, what is input: rm
+osh > ls
+after parse, what is input: ls
+a.out  main.c
+osh > !!
+ls
+osh > exit
+                ...exiting
+
+*/
